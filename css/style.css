@@ -15,3 +15,46 @@ html {
 body {
   font-family: "Poppins", sans-serif;
 }
+
+/* ######## utility classes #############  */
+.bg-heading {
+  font-size: 2rem;
+}
+
+.bold-heading {
+  font-weight: 700;
+}
+
+.text-gray {
+  color: #5e5e5e;
+}
+.text-black {
+  color: #232323;
+}
+/* -------------############# for desktop styling #############-------- */
+/* ######### navbar styling ########## */
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+  display: none;
+}
+
+.navbar .navbar-container {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar .navbar-container .logo {
+  order: -1;
+}
+
+.navbar .navbar-container .menu-items {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+.navbar .navbar-container .menu-items .menu-item a {
+  color: #5e5e5e;
+  text-decoration: none;
+  font-size: 1.8rem;
+}
