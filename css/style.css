@@ -277,24 +277,156 @@ body {
 }
 
 /* ############ food menu styling ######### */
+.food-menu-heading {
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 400;
+  color: #666;
+}
+
 .food-menu-container {
   display: flex;
   flex-wrap: wrap;
+  padding: 50px 0 30px 0;
 }
 
 .food-menu-item {
-  flex-basis: 50%;
   display: flex;
-}
-.food-menu-item .food-image {
-  width: 50%;
+  flex: 1 1 400px;
+  justify-content: space-evenly;
+  margin: 0 1rem 3rem 0;
 }
 
 .food-menu-item img {
-  width: 100%;
-  max-height: 100px;
+  width: 150px;
+  height: 150px;
   display: block;
-  border-radius: 500px;
-  object-fit: contain;
+  border-radius: 50%;
+  object-fit: cover;
   object-position: center;
+}
+
+.food-menu-item .food-description {
+  margin: auto 1.5rem;
+}
+
+.food-menu-item .food-description .food-title {
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #444;
+}
+.food-menu-item .food-description p {
+  font-size: 1.4rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.food-menu-item .food-description .food-price {
+  color: #117964;
+  font-weight: 700;
+}
+
+/* ######### testimonial styling ############ */
+
+#testimonials {
+  padding: 5rem 0rem;
+  background-color: rgb(241, 241, 241);
+}
+.testimonial-title {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 400;
+  color: #555;
+}
+.testimonial-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3rem;
+  justify-content: space-between;
+  font-size: 1.6rem;
+}
+
+.testimonial-box {
+  text-align: center;
+  padding: 3rem;
+  flex: 1 1 200px;
+}
+
+.star-rating .checked {
+  color: #ff9529;
+}
+
+.testimonial-box .testimonial-text {
+  margin: 1rem 0;
+  color: #444;
+}
+
+.testimonial-photo {
+  margin-top: 1.5rem;
+}
+.testimonial-photo img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 50%;
+  margin: auto;
+}
+
+/* ########## contact styling ######### */
+#contact {
+  padding: 5rem 0;
+  background-color: rgb(214, 214, 214);
+}
+
+.contact-container {
+  display: flex;
+  background-color: #fff;
+}
+
+.contact-container .contact-image {
+  width: 50%;
+}
+
+.contact-container .contact-image img {
+  width: 100%;
+  height: 400px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.contact-container .form-container {
+  width: 50%;
+  margin: auto;
+  padding: 1rem;
+}
+
+.form-container h2 {
+  font-size: 3rem;
+  font-weight: 400;
+  color: #444;
+  margin-bottom: 3rem;
+}
+.form-container input:not(.btn) {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  padding: 2rem 0;
+  box-shadow: none;
+  outline: none;
+  margin-bottom: 1rem;
+  color: #444;
+  font-weight: 500;
+}
+
+.form-container textarea {
+  display: block;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #ddd;
+  padding: 1rem 0;
 }
