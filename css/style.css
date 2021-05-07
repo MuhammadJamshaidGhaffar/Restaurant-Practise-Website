@@ -27,15 +27,22 @@ body {
   text-decoration: none;
   padding: 1em 2.5em;
   margin-top: 1em;
+  border: none;
   border-radius: 50px;
   cursor: pointer;
   text-transform: uppercase;
   outline: none;
   font-weight: 500;
 }
+
 .btn-primary {
   color: #fff;
   background-color: #16a083;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #0f755f;
 }
 .bg-heading {
   font-size: 3rem;
@@ -93,9 +100,6 @@ body {
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease-in-out;
-}
-.navbar .navbar-container .menu-items .menu-item a:hover {
-  color: #117964;
 }
 
 /* #################### showcase styling ############# */
@@ -429,4 +433,172 @@ body {
   outline: none;
   border-bottom: 2px solid #ddd;
   padding: 1rem 0;
+}
+
+.form-container .btn {
+  transition: all 0.1s ease-in-out;
+}
+
+.form-container .btn:active {
+  background-color: #248673;
+}
+
+/* ################ footer styling ############# */
+#footer h2 {
+  text-align: center;
+  font-size: 2rem;
+  padding: 3rem;
+  font-weight: 500;
+  color: #fff;
+  background: rgb(65, 65, 65);
+}
+
+/* ############### media Queries #############  */
+@media (max-width: 760px) {
+  .navbar-container input[type="checkbox"],
+  .input-container .hamburger-lines {
+    display: block;
+  }
+
+  .navbar {
+    opacity: 0.95;
+  }
+
+  .navbar .navbar-container {
+    position: relative;
+    display: block;
+  }
+
+  .navbar-container input[type="checkbox"] {
+    position: absolute;
+    height: 40px;
+    width: 32px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+  }
+  .navbar-container .hamburger-lines {
+    position: absolute;
+    height: 26px;
+    width: 32px;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .navbar-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #333333;
+  }
+  .navbar-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+  .navbar-container .hamburger-lines .line2 {
+    transition: transform 0.4s ease-in-out;
+  }
+  .navbar-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .navbar .navbar-container .logo {
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    font-size: 3rem;
+  }
+  .navbar .navbar-container .menu-items {
+    position: absolute;
+    background-color: #fff;
+    height: 100vh;
+    padding-top: 100px;
+    height: 100vh;
+    max-width: 300px;
+    transform: translateX(-110%);
+    margin-left: -40px;
+    padding-right: 10px;
+    padding-left: 50px;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 5px 0px 10px 0px #aaa;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar .menu-items li {
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0%);
+  }
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg);
+  }
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg);
+  }
+
+  /* ################# food styling ################### */
+
+  .food-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .food-type:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+  .food-type {
+    box-shadow: 5px 5px 10px 0px #aaa;
+  }
+
+  .food-type .img-container {
+    margin: 0;
+  }
+}
+
+/* ############ small screen ############## */
+@media (max-width: 600px) {
+  /* ########## contact styling ######### */
+
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-container .contact-image {
+    width: 90%;
+    margin: 3rem auto;
+  }
+
+  .contact-container .form-container {
+    width: 90%;
+  }
+}
+@media (max-width: 500px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* ############ landscape mode ############ */
+@media (orientation: landscape) and (max-height: 500px) {
+  .showcase-area {
+    height: 50vmax;
+  }
 }
